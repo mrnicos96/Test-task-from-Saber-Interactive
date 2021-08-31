@@ -1,0 +1,68 @@
+﻿<Window x:Class="Test_task_from_Saber_Interactive.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Test_task_from_Saber_Interactive"
+        mc:Ignorable="d"
+        Title="Test task from Saber Interactive" Height="450" Width="800">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <ListBox  Grid.Column="0" Grid.Row="0" ItemsSource="{Binding ObservableList}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="5" Orientation="Horizontal">
+                        <TextBlock Text="Имя элемента: " />
+                        <TextBlock Text="{Binding Path=Name}" />
+                        <TextBlock Text=" имя случайного элемента: " />
+                        <TextBlock Text="{Binding Path=RandomElement}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <Grid Grid.Column="1" Grid.Row="0" >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="Введите имя элемента:"  HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1"/>
+                <TextBox Text="{Binding ElementName, Mode=TwoWay}"  HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" Width="188"/>
+                <Button Command="{Binding AddCommand}" Content="Добавить элемент" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="2"/>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Column="0" Grid.Row="1" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Button Command="{Binding ClearCommand}" IsEnabled="{Binding ButtoneAvailible}" Content="Очистить список" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0"/>
+            <Button Command="{Binding SaveCommand}" Content="Сохранить список" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1"/>
+            <Button Command="{Binding OpenCommand}" Content="Открыть список" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2"/>
+        </Grid>
+    </Grid>
+</Window>

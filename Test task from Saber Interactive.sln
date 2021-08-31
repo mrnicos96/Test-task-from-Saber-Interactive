@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test task from Saber Interactive", "Test task from Saber Interactive\Test task from Saber Interactive.csproj", "{DE5FAA84-3C96-48B0-8B10-336FB87793E2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test task from Saber Interactive Console", "ConsoleApp\Test task from Saber Interactive\Test task from Saber Interactive\Test task from Saber Interactive Console.csproj", "{0210EB00-E263-4BB4-8538-BDD6FA01F706}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DE5FAA84-3C96-48B0-8B10-336FB87793E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE5FAA84-3C96-48B0-8B10-336FB87793E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE5FAA84-3C96-48B0-8B10-336FB87793E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE5FAA84-3C96-48B0-8B10-336FB87793E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0210EB00-E263-4BB4-8538-BDD6FA01F706}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0210EB00-E263-4BB4-8538-BDD6FA01F706}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0210EB00-E263-4BB4-8538-BDD6FA01F706}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0210EB00-E263-4BB4-8538-BDD6FA01F706}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FB14909D-2A1A-40B4-9373-1271B6FF9E50}
+	EndGlobalSection
+EndGlobal
